@@ -1,0 +1,306 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #1e1e1e;
+  --hover: #333333;
+  --accent: #dcdcdc;
+  --radius: 8px;
+  --bg-dark: #111111;
+  --text-dark: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: var(--hover);
+}
+
+.nova-musica {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nova-musica:hover {
+  background-color: var(--hover);
+}
+
+.recomendacao {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.feedback button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ffd700;
+}
+
+.feedback button:hover {
+  color: #ffb200;
+}
+
+.social-share {
+  margin-top: 20px;
+}
+
+.social-share a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--hover);
+}
+
+/* Animação para exibição de recomendação */
+.fade {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para dark mode */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .container {
+  background-color: #333;
+}
+
+body.dark-mode .buttons button,
+body.dark-mode .nova-musica,
+body.dark-mode .dark-mode-toggle {
+  background-color: var(--text-dark);
+  color: var(--bg-dark);
+}
+
+body.dark-mode .buttons button:hover,
+body.dark-mode .nova-musica:hover,
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: var(--accent);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que os botões se reorganizem em várias linhas */
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #111;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 120px; /* Tamanho mínimo para os botões */
+}
+
+.buttons button:hover {
+  background-color: #444;
+}
+
+.recomendacao {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.social-share {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-share a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-share a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+#historico {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Media Query para telas pequenas (dispositivos móveis) */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons button {
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .social-share {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-share a {
+    width: 80%;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  #historico {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
